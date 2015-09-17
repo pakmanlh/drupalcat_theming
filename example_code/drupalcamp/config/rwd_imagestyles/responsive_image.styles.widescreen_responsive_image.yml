@@ -1,0 +1,30 @@
+uuid: 59b3b036-a0d1-4eb8-a300-bffd6a97773d
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.custom_image_desktop
+    - image.style.custom_image_mobile
+    - image.style.custom_image_tablet
+  theme:
+    - drupalcamp
+id: widescreen_responsive_image
+label: 'Widescreen responsive image'
+image_style_mappings:
+  -
+    breakpoint_id: drupalcamp.wide
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: custom_image_desktop
+  -
+    breakpoint_id: drupalcamp.narrow
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: custom_image_tablet
+  -
+    breakpoint_id: drupalcamp.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: custom_image_mobile
+breakpoint_group: drupalcamp
+fallback_image_style: custom_image_mobile

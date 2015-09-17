@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Drupal themes</title>
+
+		<meta name="description" content="Drupal themes">
+		<meta name="author" content="Cristina Chumillas & Pako Garcia">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/ymbra.css" id="theme">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="lib/css/prism.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<span class="hashtag"><i class="fa fa-twitter"></i>@chumillas</span>
+			<span class="twitter_account"><i class="fa fa-twitter"></i>@pakmanlh</span>
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="intro" data-background="images/init.jpg">
+					<h1>Drupal themes</h1>
+					<h2>Introducció per principiants</h2>
+				</section>
+				<aside class="notes">
+
+				</aside>
+
+				<section>
+					<h2>Qui som?</h2>
+          <h3>Cristina Chumillas i Pako Garcia</h3>
+          <small><a href="http://ymbra.com">Designers & Frontend developers at <img src="images/logo-ymbra.png" class="logo-ymbra"></a><br><a href="http://twitter.com/pakmanlh">@pakmanlh</a> & <a href="http://twitter.com/chumillas">@chumillas</a> in the internets</small>
+				</section>
+
+        <section>
+					<h2>De què no va aquesta xerrada?</h2>
+          <ul>
+            <li class="fragment">D'integrar plantilles comprades «barates»</li>
+            <li class="fragment">De recursos per trobar plantilles plug&play</li>
+            <li class="fragment">De fer màgia</li>
+          </ul>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>De què s'encarreguen els themes o plantilles de Drupal?</h2>
+            <h3 class="fragment">Controlen la visualització de Drupal</h3>
+					</section>
+					<section>
+					    <h2>Estructura: ubicació</h2>
+              <ul>
+                <li class="fragment">Es situen a la carpeta:<br> <strong>/sites/all/themes/<i>nom_del_tema</i></strong></li>
+              </ul>
+				  </section>
+				  <section>
+            <h2>Estructura: fitxers</h2>
+            <p>Informació / configuració bàsica del theme;</br>
+            <strong><i>nom_del_tema.info</i></strong></p>
+          </section>
+          <section>
+            <h3>nom_del_tema.info</h3>
+            <p><small>Informació bàsica del theme</small></p>
+  <pre><code data-trim contenteditable class="max">
+screenshot  = screenshot.png
+name        = Custom theme
+description = Description of the custom theme
+core        = 7.x
+base theme  = zen
+            </code></pre>
+          </section>
+          <section>
+            <h2>nom_del_tema.info</h2>
+            <p><small>Carregar fulls d'estils CSS</small></p>
+  <pre><code data-trim contenteditable class="max">
+; Esborrar estils que no necessitem
+stylesheets[all][] = system.menus.css
+stylesheets[all][] = system.messages.css
+stylesheets[all][] = system.theme.css
+stylesheets[all][] = jquery.mmenu.all.css
+
+; Afegir els nostres propis.
+stylesheets[all][] = css/styles.css
+stylesheets[all][] = css/mmenu/jquery.mmenu.all.css
+
+            </code></pre>
+          </section>
+    <section>
+            <h2>nom_del_tema.info</h2>
+            <p><small>Carregar scripts JavaScript</small></p>
+  <pre><code data-trim contenteditable class="max">
+; Afegir JavaScript
+scripts[] = js/custom_script.js
+            </code></pre>
+          </section>
+<section>
+            <h2>nom_del_tema.info</h2>
+            <p><small>Definir regions</small></p>
+  <pre><code data-trim contenteditable class="max">
+; Definició de regions
+regions[header]         = Header
+regions[navigation]     = Navigation bar
+regions[highlighted]    = Highlighted
+regions[help]           = Help
+regions[content]        = Content
+regions[sidebar_first]  = First sidebar
+regions[sidebar_second] = Second sidebar
+regions[footer]         = Footer
+regions[bottom]         = Page bottom
+            </code></pre>
+          </section>
+                    <section>
+            <h2>nom_del_tema.info</h2>
+            <p><small>Definir breakpoints</small></p>
+  <pre><code data-trim contenteditable class="max">
+; Definició de breakpoints.
+breakpoints[mobile] = (min-width: 0px) and (max-width: 22.49em)
+breakpoints[mobile_large] = (min-width: 22.50em) and (max-width: 34.35em)
+breakpoints[tablet_small] = (min-width: 34.36em) and (max-width: 43.125em)
+breakpoints[tablet] = (min-width: 43.13em) and (max-width: 47.9em)
+breakpoints[desktop] = (min-width: 48em) and (max-width: 59.9em)
+breakpoints[widescreen] = (min-width: 60em)
+            </code></pre>
+          </section>
+        <section>
+            <h2>nom_del_tema.info</h2>
+            <p><small>Altres configuracions dels temes</small></p>
+  <pre><code data-trim contenteditable class="max">
+; Altres funcionalitats
+features[] = logo
+features[] = name
+features[] = slogan
+settings[zen_breadcrumb]           = no
+settings[zen_breadcrumb_separator] = ' › '
+settings[zen_breadcrumb_home]      = 1
+            </code></pre>
+          </section>
+
+          <section class="regions">
+            <h2>Templates (.tpl) d'un theme</h2>
+            <p>Es troben dins la carpeta <i>templates</i> del theme i poden estar ordenats en subcarpetes (pages, nodes, views, blocks, etc) </p>
+          </section>
+          <section class="regions">
+            <h2>Templates (.tpl) d'un theme</h2>
+            <ul class="llistat">
+            <li style="color:#bbecaa;"><small>html.tpl.php</small></li>
+            <li style="color:#eafa92;"><small>page.tpl.php</small></li>
+            <li style="color:#fdc068;"><small>region.tpl.php</small></li>
+            <li style="color:#fca0da;"><small>block.tpl.php</small></li>
+            <li style="color:#cbdcff;"><small>node.tpl.php</small></li>
+            <li style="color:#4adcdc;"><small>comment-wrapper.tpl.php</small></li>
+            <li style="color:#43a1b9;"><small>comment-wrapper.tpl.php</small></li>
+            </ul>
+            <p><img src="images/regions.png"></p>
+          </section>
+
+
+					  				        <section>
+				        	<section>
+				        		<h1>Documentación</h1>
+                    <h3><a href="https://www.drupal.org/documentation/theme">Themes en Drupal.org</a></h3>
+				        		<h3><a href="http://d8.sqndr.com/">Guía de theming en Drupal 8</a></h3>
+
+				        	</section>
+				        </section>
+				        <section>
+				        	<section>
+				        		<h2>Gracias!</h2>
+				        		<h1>That's all folks</h1>
+				        		<h3>¿Preguntas?</h3>
+				        		<p><i class="fa fa-envelope-o"></i>
+cristina@ymbra.com | pako@ymbra.com<br>
+<i class="fa fa-twitter-square"></i>
+@chumillas | @pakmanlh </p>
+				        	</section>
+				        </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
