@@ -1324,3 +1324,20 @@ body {
 		}
 	}
 }
+
+.themes_base {
+	ul {
+		width: 50%;
+	}
+	ul,
+	img {
+		float: left;
+	}
+}
+
+.compass_logo {
+	background: url("http://compass-style.org/images/compass-logo.png?1408149819") no-repeat center bottom;
+	width: 423px;
+	height: 88px;
+	margin: 0 auto !important;
+}

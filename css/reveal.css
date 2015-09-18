@@ -1113,3 +1113,14 @@ body {
   .regions img li, .regions .llistat li {
     font-weight: bold;
     background: white; }
+
+.themes_base ul {
+  width: 50%; }
+.themes_base ul, .themes_base img {
+  float: left; }
+
+.compass_logo {
+  background: url("http://compass-style.org/images/compass-logo.png?1408149819") no-repeat center bottom;
+  width: 423px;
+  height: 88px;
+  margin: 0 auto !important; }

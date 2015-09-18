@@ -59,19 +59,29 @@
 				</section>
 
         <section>
-					<h2>De què no va aquesta xerrada?</h2>
+          <h2>De què no va aquesta xerrada?</h2>
           <ul>
             <li class="fragment">D'integrar plantilles comprades «barates»</li>
             <li class="fragment">De recursos per trobar plantilles plug&play</li>
             <li class="fragment">De fer màgia</li>
           </ul>
-				</section>
+        </section>
+        <section>
+          <h2>Què volem explicar?</h2>
+          <ul>
+            <li class="fragment">Com funciona la part visual de Drupal</li>
+            <li class="fragment">Poder entendre com variar visualment Drupal</li>
+            <li class="fragment">Conèixer les eines de què disposa Drupal per fer-ho</li>
+            <li class="fragment">Solventar al màxim dubtes existencials</li>
+          </ul>
+        </section>
 
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
 						<h2>De què s'encarreguen els themes o plantilles de Drupal?</h2>
             <h3 class="fragment">Controlen la visualització de Drupal</h3>
+            <h3 class="fragment">S'instal·len com els mòduls</h3>
 					</section>
 					<section>
 					    <h2>Estructura: ubicació</h2>
@@ -79,6 +89,120 @@
                 <li class="fragment">Es situen a la carpeta:<br> <strong>/sites/all/themes/<i>nom_del_tema</i></strong></li>
               </ul>
 				  </section>
+
+          <section>
+            <h2>Tipus de themes</h2>
+            <ul>
+              <li class="fragment">Themes integrats</li>
+              <li class="fragment">Themes framework</li>
+              <li class="fragment">Themes base</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Themes integrats</h2>
+            <ul>
+              <li class="fragment">Miren de donar una solució integrada i completa</li>
+              <li class="fragment">Ràpids de fer servir</li>
+              <li class="fragment">Integren solucions poc personalitzables</li>
+              <li class="fragment">En molts casos una solució insuficient a la nostra necessitat</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Themes integrats: recursos</h2>
+            <ul>
+              <li class="fragment"><a href="http://themeforest.net/category/cms-themes/drupal">Theme forest</a></li>
+              <li class="fragment"><a href="http://www.templatemonster.com/drupal-themes.php">Template monster</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Themes framework</h2>
+            <ul>
+              <li class="fragment"><small>Es basen en frameworks de components estilitzats</small></li>
+              <li class="fragment"><small>Ràpids de fer servir</small></li>
+              <li class="fragment"><small>Adapten el marcat de Drupal al framework (o almenys ho intenten)</small></li>
+              <li class="fragment"><small>Permeten aplicar variacions o «skins» d'aquests frameworks</small></li>
+              <li class="fragment"><small>Solen venir amb solucions responsive per defecte</small></li>
+              <li class="fragment"><small>Es necessari haver de modificar manualment el marcat de Drupal</small></li>
+              <li class="fragment"><small>Hi ha mòduls que fan (o intenten fer) aquesta tasca </small></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Themes framework: recursos</h2>
+            <ul>
+              <li class="fragment"><a href="https://www.drupal.org/project/bootstrap">(twitter) Bootstrap</a></li>
+              <li class="fragment"><a href="https://www.drupal.org/project/zurb_foundation">ZURB Foundation</a></li>
+              <li class="fragment"><a href="https://www.drupal.org/project/skeletontheme">Skeleton</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Themes base</h2>
+            <ul>
+              <li class="fragment"><small>Estan pensats per generar un subtheme basat en ells</small></li>
+              <li class="fragment"><small>Presenten una solució minimalista (en marcat i css) per començar a treballar-hi</small></li>
+              <li class="fragment"><small>Tenen molt potencial per arribar a generar un estil visual 100% custom</small></li>
+              <li class="fragment"><small>Incorporen solucions de layouts RWD</small></li>
+              <li class="fragment"><small>Requereixen coneixements de CSS (Sass)</small></li>
+            </ul>
+          </section>
+
+          <section class="themes_base">
+            <h2>Themes base: Omega</h2>
+            <img src="https://www.drupal.org/files/styles/grid-3/public/project-images/logo_96.png?itok=kGxNWBZj">
+            <ul>
+              <li class="fragment"><small>Versió 7.4 recomanada</small></li>
+              <li class="fragment"><small>Sass</small></li>
+              <li class="fragment"><small>Layouts RWD basats en susy</small></li>
+              <li class="fragment"><small>Moltes utilitats (livereload, susy grids, etc)</small></li>
+            </ul>
+          </section>
+
+          <section class="themes_base">
+            <h2>Themes base: Zen</h2>
+            <img src="https://www.drupal.org/files/styles/grid-3/public/images/zen-logo.png?itok=q1YzmZod">
+            <ul>
+              <li class="fragment"><small>Versió 7.5 recomanada</small></li>
+              <li class="fragment"><small>Sass</small></li>
+              <li class="fragment"><small>Layouts RWD basats en ZenGrids</small></li>
+              <li class="fragment"><small>Moltes utilitats (Respond.js IE8, Normalize reset)</small></li>
+              <li class="fragment"><small>Suport opcional per IE6 & IE7</small></li>
+            </ul>
+          </section>
+          </section>
+          <section>
+          <section >
+            <h2>Gestionar gemmes de Ruby</h2>
+            <a href="http://bundler.io/"><img src="http://bundler.io/images/gembundler.png" width="400px"></a>
+            <ul>
+              <li class="fragment"><small>Instal·lar Ruby</small></li>
+              <li class="fragment"><small>Crear un fitxer Gemfile amb les gemmes que es faran servir</small></li>
+              <li class="fragment"><small>Fer servir Bundle per instal·lar-les o fer-les servir només en aquest projecte</small></li>
+            </ul>
+          </section>
+
+          <section>
+            <img src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" width="200px">
+            <p class="fragment"><small>Metallenguatge que genera CSS</small></p>
+            <p class="fragment"><small>Facilita l'escriptura de CSS</small></p>
+            <p class="fragment"><small>Permet variables i programació</small></p>
+            <p class="fragment"><small>Gema de Ruby</small></p>
+            <p class="fragment"><small><a href="http://sass-lang.com/guide">+ info</a></small></p>
+          </section>
+
+          <section>
+            <div class="compass_logo"></div>
+            <p class="fragment"><small>Framework CSS</small></p>
+            <p class="fragment"><small>Facilita l'escriptura de CSS</small></p>
+            <p class="fragment"><small>Mitjançant mixins soluciona problemes freqüents</small></p>
+            <p class="fragment"><small>Gema de Ruby</small></p>
+            <p class="fragment"><small><a href="http://compass-style.org/help/">+ info</a></small></p>
+          </section>
+          </section>
+          <section>
 				  <section>
             <h2>Estructura: fitxers</h2>
             <p>Informació / configuració bàsica del theme;</br>
@@ -96,7 +220,7 @@ base theme  = zen
             </code></pre>
           </section>
           <section>
-            <h2>nom_del_tema.info</h2>
+            <h3>nom_del_tema.info</h3>
             <p><small>Carregar fulls d'estils CSS</small></p>
   <pre><code data-trim contenteditable class="max">
 ; Esborrar estils que no necessitem
@@ -112,7 +236,7 @@ stylesheets[all][] = css/mmenu/jquery.mmenu.all.css
             </code></pre>
           </section>
     <section>
-            <h2>nom_del_tema.info</h2>
+            <h3>nom_del_tema.info</h3>
             <p><small>Carregar scripts JavaScript</small></p>
   <pre><code data-trim contenteditable class="max">
 ; Afegir JavaScript
@@ -120,7 +244,7 @@ scripts[] = js/custom_script.js
             </code></pre>
           </section>
 <section>
-            <h2>nom_del_tema.info</h2>
+            <h3>nom_del_tema.info</h3>
             <p><small>Definir regions</small></p>
   <pre><code data-trim contenteditable class="max">
 ; Definició de regions
@@ -136,7 +260,7 @@ regions[bottom]         = Page bottom
             </code></pre>
           </section>
                     <section>
-            <h2>nom_del_tema.info</h2>
+            <h3>nom_del_tema.info</h3>
             <p><small>Definir breakpoints</small></p>
   <pre><code data-trim contenteditable class="max">
 ; Definició de breakpoints.
@@ -149,7 +273,7 @@ breakpoints[widescreen] = (min-width: 60em)
             </code></pre>
           </section>
         <section>
-            <h2>nom_del_tema.info</h2>
+            <h3>nom_del_tema.info</h3>
             <p><small>Altres configuracions dels temes</small></p>
   <pre><code data-trim contenteditable class="max">
 ; Altres funcionalitats
@@ -179,21 +303,88 @@ settings[zen_breadcrumb_home]      = 1
             </ul>
             <p><img src="images/regions.png"></p>
           </section>
-
-
-					  				        <section>
+                            <section>
+                              <h3>Com saber el nom dels TPL</h3>
+                              <small>settings.php:</small>
+                              <pre><code class="language-php">$conf['theme_debug'] = TRUE;</code></pre>
+                              <small>Exemple de codi:</small>
+                              <pre><code data-trim class="language-markup">
+          &lt;!-- THEME DEBUG --&gt;
+          &lt;!-- CALL: theme('block') --&gt;
+          &lt;!-- FILE NAME SUGGESTIONS:
+             * block--system--powered-by.tpl.php
+             * block--system.tpl.php
+             * block--footer.tpl.php
+             x block.tpl.php
+          --&gt;
+          &lt;!-- BEGIN OUTPUT from 'modules/block/block.tpl.php' --&gt;
+          &lt;div id=&quot;block-system-powered-by&quot; class=&quot;block block-system&quot;&gt;
+            &lt;div class=&quot;content&quot;&gt;
+              &lt;span&gt;Powered by &lt;a href=&quot;https://www.drupal.org&quot;&gt;Drupal&lt;/a&gt;&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;!-- END OUTPUT from 'modules/block/block.tpl.php' --&gt;
+          </code></pre>
+                              <aside class="notes">
+                                <p>27:00 - 28:00</p>
+                              </aside>
+                            </section>
+                            <section>
+                    <h3>fitxer template.php</h3>
+                    <p><small>Inclou funcions theme, preprocess i process (PHP)</small></p>
+                  </section>
+                <section>
+                    <h3>fitxer template.php</h3>
+                    <p><small>Exemple de funció preprocess_page </small></p>
+          <pre><code data-trim contenteditable class="max language-php">
+        function custom_theme_preprocess_page(&$variables, $hook) {
+  $variables['sample_variable'] = t('Lorem ipsum.');
+}
+                    </code></pre>
+                  </section>
+					  				        </section>
+                  <section>
+                  <section>
+                    <h3>Mòduls & LLibreries útils</h3>
+                    <ul>
+                    <li class="fragment"><a href="https://dgo.to/breakpoints">Breakpoints</a></li>
+                    <li class="fragment"><a href="https://dgo.to/picture">Picture</a></li>
+                    <li class="fragment"><a href="https://dgo.to/breakpointsjs">Breakpoints JS</a></li>
+                    <li class="fragment"><a href="https://dgo.to/jquery_update">jQuery update</a></li>
+                    <li class="fragment"><a href="https://dgo.to/colorbox">Colorbox</a></li>
+                    <li class="fragment"><a href="https://dgo.to/field_group_link">Field Group Link</a></li>
+                    <li class="fragment"><a href="http://owlgraphic.com/owlcarousel/">OWL Carousel</a></li>
+                    <li class="fragment"><a href="http://flexslider.woothemes.com/">FlexSlider</a></li>
+                    </ul>
+                  </section>
+                </section>
+                <section>
+                  <section>
+                    <h3>Novetats Drupal 8</h3>
+                    <ul>
+                    <li class="fragment">Twig (adèu al PHP a les plantilles!)</li>
+                    <li class="fragment">Picture & Breapoints en core</li>
+                    <li class="fragment">Nuevos themes en Core (Seven i Bartik) responsive per defecte</li>
+                    <li class="fragment">Nou theme base Classy</li>
+                    <li class="fragment">Marcat net i polit</li>
+                    <li class="fragment">SMACSS</li>
+                    <li class="fragment">Tota la informació són render arrays</li>
+                    <li class="fragment"><a href="http://pakmanlh.github.io/dcspain2015themeDrupal8/">+ info</a></li>
+                    </ul>
+                  </section>
+                </section>
+				        <section>
 				        	<section>
-				        		<h1>Documentación</h1>
+				        		<h1>Recursos</h1>
                     <h3><a href="https://www.drupal.org/documentation/theme">Themes en Drupal.org</a></h3>
 				        		<h3><a href="http://d8.sqndr.com/">Guía de theming en Drupal 8</a></h3>
-
 				        	</section>
 				        </section>
 				        <section>
 				        	<section>
-				        		<h2>Gracias!</h2>
+				        		<h2>Gràcies!</h2>
 				        		<h1>That's all folks</h1>
-				        		<h3>¿Preguntas?</h3>
+				        		<h3>Preguntes?</h3>
 				        		<p><i class="fa fa-envelope-o"></i>
 cristina@ymbra.com | pako@ymbra.com<br>
 <i class="fa fa-twitter-square"></i>
